@@ -18,3 +18,8 @@ function getHumanChoice() {
   let choice = prompt("What is your pick?", "rock");
   return choice;
 }
+
+// track of the players score
+
+let humanScore = 0;
+let computerScore = 0;
