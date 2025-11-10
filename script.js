@@ -19,36 +19,54 @@ function getHumanChoice() {
   return choice;
 }
 
-// Step 3: Intial track of the players score
+// Step 5: Logic to play the entire game
 
-let humanScore = 0;
-let computerScore = 0;
+function playGame() {
+  // Step 3: Intial track of the players score
 
-// Step 4: Logic to play a single round
+  let humanScore = 0;
+  let computerScore = 0;
 
-function playRound(humanChoice, computerChoice) {
-  humanChoice = humanChoice.toLowerCase();
-  let result;
+  // Step 4: Logic to play a single round
 
-  if (computerChoice === humanChoice) {
-    result = `It's a tie you both picked ${humanChoice}`;
-  } else if (
-    (computerChoice === "scissors" && humanChoice === "rock") ||
-    (computerChoice === "rock" && humanChoice === "paper") ||
-    (computerChoice === "paper" && humanChoice === "scissors")
-  ) {
-    result = `You win! ${humanChoice} beats ${computerChoice}`;
-    humanScore++;
-  } else {
-    result = `You lose! ${computerChoice} beats ${humanChoice}`;
-    computerScore++;
+  function playRound(humanChoice, computerChoice) {
+    humanChoice = humanChoice.toLowerCase();
+    let result;
+
+    if (computerChoice === humanChoice) {
+      result = `It's a tie you both picked ${humanChoice}`;
+    } else if (
+      (computerChoice === "scissors" && humanChoice === "rock") ||
+      (computerChoice === "rock" && humanChoice === "paper") ||
+      (computerChoice === "paper" && humanChoice === "scissors")
+    ) {
+      result = `You win! ${humanChoice} beats ${computerChoice}`;
+      humanScore++;
+    } else {
+      result = `You lose! ${computerChoice} beats ${humanChoice}`;
+      computerScore++;
+    }
+
+    return result;
   }
 
-  return result;
+  for (let i = 1; i <= 5; i++) {
+    const humanSelection = getHumanChoice();
+    const computerSelection = getComputerChoice();
+    const roundResult = playRound(humanSelection, computerSelection);
+
+    console.log(`Round ${i}: ${roundResult}`);
+    console.log(`Human score: ${humanScore}, Computer score: ${computerScore}`);
+  }
+
+  let winner;
+  if (humanScore > computerScore) {
+    winner = "Congratulations! You win!";
+  } else if (computerScore > humanScore) {
+    winner = "Computer wins the game!";
+  } else {
+    winner = "It's a tie overall!";
+  }
+
+  return winner;
 }
-
-const humanSelection = getHumanChoice();
-const computerSelection = getComputerChoice();
-const roundResult = playRound(humanSelection, computerSelection);
-
-console.log(roundResult);
