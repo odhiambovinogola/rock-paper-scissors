@@ -1,5 +1,10 @@
 # Rock Paper Scissors
 
+## Live Demo
+
+View the live site here:
+https://odhiambovinogola.github.io/rock-paper-scissors/
+
 ## Overview
 
 A Rock Paper Scissors game played entirely in the console, built as part of [The Odin Project's Foundations course](https://www.theodinproject.com/lessons/foundations-rock-paper-scissors). This project challenged me to apply problem-solving skills, loops, and JavaScript logic, while also practicing structuring a small document and documenting my work (commits & README). The game includes multi-round score tracking, giving a more complete play experience than a single round.
