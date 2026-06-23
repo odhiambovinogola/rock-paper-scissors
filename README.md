@@ -7,44 +7,46 @@ https://odhiambovinogola.github.io/rock-paper-scissors/
 
 ## Overview
 
-A Rock Paper Scissors game played entirely in the console, built as part of [The Odin Project's Foundations course](https://www.theodinproject.com/lessons/foundations-rock-paper-scissors). This project challenged me to apply problem-solving skills, loops, and JavaScript logic, while also practicing structuring a small document and documenting my work (commits & README). The game includes multi-round score tracking, giving a more complete play experience than a single round.
+This project is a browser-based Rock Paper Scissors game where you play against the computer. The first player to reach 5 points wins the game. The UI shows the score, the choices made in each round, and the current round result.
+
+## How to Play
+
+1. Open the game in your browser.
+2. Click one of the buttons: Rock, Paper, or Scissors.
+3. The computer chooses a move at the same time.
+4. The round result is shown on the page.
+5. The game ends when either player reaches 5 points.
+6. Click the reset button to start a new game.
 
 ## Key Features
 
-- Generates random choices for the computer using arrays and `Math.random()`.
-- Collects player input via console prompts.
-- Loops through multiple rounds, tracking scores for both players.
-- Announces the winner at the end of the game.
+- Random computer choices for each round.
+- Score tracking for both players.
+- A clear result message after every round.
+- A reset button to restart the game.
+- A simple layout that works in the browser.
 
 ## What I Learned
 
-- Clarified the difference between `console.log()` and `return()`, understanding when each is appropriate in different contexts (e.g., output vs function results).
-- Practiced translating pseudocode into code, improving problem-solving skills.
-- Used functions to organize game logic, track player scores, and handle multi-round gameplay — the 5-round logic was particularly challenging but taught me a lot.
-- Learned to standardize player input by converting text to the same case.
-- Explored loops with a fixed number of iterations versus loops that adapt to conditions, to understand which approach fits a given scenario.
-- Improved documentation skills, including writing comments and commit messages.
+- Used functions to organize the game logic.
+- Learned how to update text on the page with JavaScript.
+- Practiced using buttons and event listeners.
+- Improved my understanding of score tracking and game flow.
+- Learned how to reset the game state cleanly.
 
-## Challenges
+## Challenges I Struggled With
 
-- Translating pseudocode to working code, especially the 5-round logic, remained tricky but I’m improving.
-- Breaking problems into smaller, manageable pieces to spot missing steps is still a learning process.
-- Explaining both the “what” and the “why” in code and documentation is challenging but getting easier.
-- Writing clear, structured READMEs is still developing — each draft makes me stronger.
+- Understanding when to check the score during the game flow.
+- Making sure the game stops correctly after someone reaches 5 points.
+- Keeping the winner message clear without showing too many updates at once.
+- Learning how to reset the page state so the game feels fresh again.
 
 ## Getting Started
 
-1. Clone this repo:
-
-```
-git clone git@github.com:odhiambovinogola/rock-paper-scissors.git
-```
-
-2. Open `index.html`.
-3. Open DevTools (F12 → Console).
-4. Type `playGame()` and hit Enter to start.
-5. The game runs for 5 rounds, asks for your choices using prompt(), tracks scores, and announces the winner in the console.
+1. Clone this repository.
+2. Open `index.html` in a browser.
+3. Play the game using the buttons on the page.
 
 ## Acknowledgements
 
-- [The Odin Project](https://www.theodinproject.com/) for the curriculum and project brief
+- [The Odin Project](https://www.theodinproject.com/) for the project idea and guidance.
