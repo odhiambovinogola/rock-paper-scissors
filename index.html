@@ -1,22 +1,54 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./script.js" defer></script>
   </head>
 
   <body>
-    <h1>Rock–Paper–Scissors</h1>
-    <p>
-      This is a simple console-based game. Open your DevTools (F12) and check
-      the console to play.
-    </p>
-    <p>
-      To start the game, just type <code>playGame();</code> in the console and
-      hit Enter.
-    </p>
+    <main class="game-shell">
+      <section class="game-card">
+        <h1>Rock Paper Scissors</h1>
+        <p class="subtitle">First to 5 points wins</p>
 
-    <script src="./script.js"></script>
+        <div class="scoreboard">
+          <div class="score-box">
+            <span>You</span>
+            <strong class="human-score">0</strong>
+          </div>
+          <div class="score-box">
+            <span>Computer</span>
+            <strong class="computer-score">0</strong>
+          </div>
+        </div>
+
+        <div class="choices">
+          <button class="rock">✊ Rock</button>
+          <button class="paper">✋ Paper</button>
+          <button class="scissors">✌️ Scissors</button>
+        </div>
+
+        <div class="result-panel">
+          <p class="result-text">Choose a move to start the game.</p>
+          <div class="showdown">
+            <div>
+              <span>You picked</span>
+              <strong class="human-selection">—</strong>
+            </div>
+            <div>
+              <span>Computer picked</span>
+              <strong class="computer-selection">—</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="winner-announcement" aria-live="polite">Winner: —</div>
+
+        <button class="reset-btn">Reset Game</button>
+      </section>
+    </main>
   </body>
 </html>
