@@ -3,7 +3,7 @@
 ## Live Demo
 
 View the live site here:
-https://odhiambovinogola.github.io/rock-paper-scissors/
+https://vinogola.github.io/rock-paper-scissors/
 
 ## Overview
 
