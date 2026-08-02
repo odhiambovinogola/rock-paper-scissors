@@ -37,7 +37,9 @@ This project is a browser-based Rock Paper Scissors game where you play against 
 ## Challenges I Struggled With
 
 - Understanding when to check the score during the game flow.
-- Making sure the game stops correctly after someone reaches 5 points.
+- Making sure the game stops correctly after someone reaches 5 points — the real fix was
+  moving the `gameOver` flag outside the function that runs every round. Declared inside it,
+  the flag reset to `false` on every call, so a win could never actually stick.
 - Keeping the winner message clear without showing too many updates at once.
 - Learning how to reset the page state so the game feels fresh again.
 
